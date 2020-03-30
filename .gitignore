@@ -1,0 +1,17 @@
+# Dependency directory 
+node_modules
+
+# Output
+output
+
+# IntelliJ / WebStorm 
+.idea
+
+# OSX hidden files
+.DS_Store
+
+# VS Code 
+.vscode/*
+
+# .env file
+.env
