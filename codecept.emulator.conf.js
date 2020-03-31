@@ -18,7 +18,10 @@ exports.config = {
         deviceName: "Android Emulator",          
         udid: "emulator-5554",       
         platformVersion: "10.0",
-        browserName: "chrome"                            
+        browserName: "chrome",
+        chromeOptions: {
+          w3c: false, // false for platform: 'Android'
+        },
       }      
     }    
   },

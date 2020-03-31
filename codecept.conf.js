@@ -18,14 +18,20 @@ exports.config = {
       url: "http://localhost",
       platform: "Android",
       browserName: "chrome",
-      desiredCapabilities: {         
+      desiredCapabilities: {
         project: 'Mobile Browser POC',
-        build: 'Mobile Browser POC', 
-        "osVersion" : "9.0",
-        "deviceName" : "Google Pixel 2",
-        "realMobile" : "true",
-        "appiumVersion" : "1.16.0",
-        "local" : "false",              
+        build: 'Mobile Browser POC',
+        automationName: "UiAutomator2",
+        chromeOptions: {
+          w3c: false, // false for platform: 'Android'
+        },
+        "bstack:options": {
+          "osVersion" : "9.0",
+          "deviceName" : "Google Pixel 2",
+          "realMobile" : "true",
+          "appiumVersion" : "1.16.0",
+          "local" : "false",
+        }
       }      
     }
   },
