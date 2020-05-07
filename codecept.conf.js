@@ -29,7 +29,6 @@ exports.config = {
           "osVersion" : "9.0",
           "deviceName" : "Google Pixel 2",
           "realMobile" : "true",
-          "appiumVersion" : "1.16.0",
           "local" : "false",
         }
       }      
@@ -47,10 +46,6 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: true
-    },
-    wdio: {
-      enabled: true,
-      services: ['selenium-standalone']
     }
   }
 }

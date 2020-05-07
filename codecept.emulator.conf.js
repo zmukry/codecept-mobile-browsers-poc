@@ -1,6 +1,5 @@
 const { setHeadlessWhen } = require('@codeceptjs/configure');
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config();
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // HEADLESS=true npx codecept run
@@ -12,7 +11,12 @@ exports.config = {
   helpers: {
     Appium: {
       url: "http://localhost",      
-      platform: "Android",      
+      platform: "Android",
+      waitForTimeout: 20000,
+      timeouts: {
+        "script": 60000,
+        "page load": 30000
+      },
       desiredCapabilities: {
         automationName: "UiAutomator2",
         deviceName: "Android Emulator",          
@@ -37,10 +41,6 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: true
-    },
-    wdio: {
-      enabled: true,
-      services: ['selenium-standalone']
     }
   }
 }
